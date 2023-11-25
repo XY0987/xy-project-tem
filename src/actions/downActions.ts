@@ -1,20 +1,26 @@
-// import { RNURL } from '../config/downloadUrl';
-// import { promisify } from 'util';
+import path = require('path');
+import { REACTURL, RNURL } from '../config/downloadUrl';
+import { download } from 'download-git-repo';
+const { promisify } = require('util');
+const download = promisify(require('download-git-repo'));
+function getUrl(projectType) {
+  switch (projectType) {
+    case 'RN':
+      return RNURL;
+    default:
+      return REACTURL;
+  }
+}
 
-// function getUrl(projectType) {
-//   return RNURL;
-// }
-
-// const download = promisify(require('download-git-repo'));
-export function create(project) {
-  console.log(project);
-  //   //默认下载react模板
-  //   const url = getUrl(project);
-  //   try {
-  //     await download(url, project, { clone: true });
-  //     // 判断是否执行下载命令
-  //   } catch (error) {
-  //     console.log(error);
-  //     console.log('github 连接失败,请稍后重试');
-  //   }
+export async function create(project) {
+  const { create } = project;
+  //默认下载react模板
+  const url = getUrl(create[0]);
+  try {
+    await download(url, path.join(process.cwd(), create[1]), {
+      clone: true,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
