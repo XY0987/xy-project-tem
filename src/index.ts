@@ -3,12 +3,7 @@
 import { create } from './actions/downActions';
 import { program } from 'commander';
 
-program
-  .option(
-    '--create <project...>',
-    '第一个参数是模板类型，第二个类型是新建的项目名称',
-  )
-  .action(create);
+program.option('create', '创建项目').action(create);
 program.parse(process.argv);
 
 /* 
