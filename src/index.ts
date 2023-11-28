@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import { create, createCmd } from './actions/downActions';
-import { program } from 'commander';
+const program = require('commander');
 
-program.option('create', '创建项目交互方式').action(create);
+program.command('create').description('创建项目交互方式').action(create);
 program
-  .option('-c', '命令行方式创建项目')
+  .command('c')
+  .description('命令行方式创建项目,-t 项目类型 -n 项目名称')
   .option('-type , -t <type>', '项目类型', 'react')
   .option('-name , -n <name>', '项目名称', 'react_test')
   .action(createCmd);
