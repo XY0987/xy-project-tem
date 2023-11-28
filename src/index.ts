@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 
-import { create } from './actions/downActions';
+import { create, createCmd } from './actions/downActions';
 import { program } from 'commander';
 
-program.option('create', '创建项目').action(create);
+program.option('create', '创建项目交互方式').action(create);
+program
+  .option('-c', '命令行方式创建项目')
+  .option('-type , -t <type>', '项目类型', 'react')
+  .option('-name , -n <name>', '项目名称', 'react_test')
+  .action(createCmd);
 program.parse(process.argv);
 
 /* 

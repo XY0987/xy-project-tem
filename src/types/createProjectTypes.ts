@@ -1,10 +1,10 @@
 export type projectType =
-  | 'React'
-  | 'Vue'
-  | 'Electron-react'
-  | 'Electron-vue'
-  | 'ReactNative'
-  | 'Nuxt'
-  | 'Next'
-  | 'Nestjs'
-  | 'Koa';
+  | 'react'
+  | 'vue'
+  | 'electron-react'
+  | 'electron-vue'
+  | 'reactnative'
+  | 'nuxt'
+  | 'next'
+  | 'nestjs'
+  | 'koa';
