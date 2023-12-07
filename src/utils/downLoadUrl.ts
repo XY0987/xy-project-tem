@@ -1,4 +1,11 @@
-import { REACTURL, RNURL } from '../config/downloadUrl';
+import {
+  ELECTRONREACTURL,
+  ELECTRONVUEURL,
+  NUXTURL,
+  REACTURL,
+  RNURL,
+  VUE2URL,
+} from '../config/downloadUrl';
 import { projectType } from '../types/createProjectTypes';
 
 // 将项目类型全部变成大写来匹配
@@ -6,16 +13,16 @@ export function getTemDownUrl(projectType: projectType) {
   switch (projectType) {
     case 'react':
       return REACTURL;
-    case 'vue':
-      return;
+    case 'vue2':
+      return VUE2URL;
     case 'electron-react':
-      return;
+      return ELECTRONREACTURL;
     case 'electron-vue':
-      return;
+      return ELECTRONVUEURL;
     case 'next':
       return;
     case 'nuxt':
-      return;
+      return NUXTURL;
     case 'reactnative':
       return RNURL;
     case 'nestjs':

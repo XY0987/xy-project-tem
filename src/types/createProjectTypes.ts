@@ -1,6 +1,6 @@
 export type projectType =
   | 'react'
-  | 'vue'
+  | 'vue2'
   | 'electron-react'
   | 'electron-vue'
   | 'reactnative'

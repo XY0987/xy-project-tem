@@ -11,7 +11,7 @@ export const createProjectOptions = [
     message: '请选择项目类型',
     choices: [
       'React',
-      'Vue',
+      'Vue2',
       'Electron-react',
       'Electron-vue',
       'ReactNative',
