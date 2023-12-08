@@ -1,8 +1,8 @@
 {
-  "name": "xy-project-tem",
+  "name": "@xy0711/xytem",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
@@ -10,7 +10,24 @@
     "prettier": "prettier --write",
     "build": "rimraf lib && tsc --build"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "cli",
+    "typescript 脚手架",
+    "ts 脚手架",
+    "tem",
+    "脚手架",
+    "项目模板"
+  ],
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XY0987/xy-project-tem.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
