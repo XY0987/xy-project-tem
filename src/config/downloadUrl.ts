@@ -6,3 +6,9 @@ export const ELECTRONREACTURL =
   'direct:https://github.com/XY0987/electron-react-tem.git#main';
 export const ELECTRONVUEURL =
   'direct:https://github.com/XY0987/electron-vue-tem.git#main';
+
+export const MEETINGBACKSTAGEDEMO =
+  'direct:https://github.com/XY0987/meeting-backstage-demo.git#main';
+
+export const MEETINGFOREGROUNDDEMO =
+  'direct:https://github.com/XY0987/meeting-foreground-demo.git#main';

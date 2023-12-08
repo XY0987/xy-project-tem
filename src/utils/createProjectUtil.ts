@@ -1,8 +1,6 @@
-import { getTemDownUrl } from '../utils/downLoadUrl';
 import path = require('path');
 import chalk = require('chalk');
 import ora = require('ora');
-import { projectType } from '../types/createProjectTypes';
 import { executeShell } from './shellUtil';
 // import { removeDir } from './fsUtil';
 
@@ -19,12 +17,7 @@ export function parseCmdAbb(value: Object) {
   return obj;
 }
 // clone项目
-export async function downloadProject(
-  projectName: string,
-  frameType: projectType,
-) {
-  frameType = frameType.toLocaleLowerCase() as projectType;
-  const url = getTemDownUrl(frameType);
+export async function downloadProject(projectName: string, url: string) {
   const loading = ora(chalk.yellowBright('下载中'));
   loading.start();
   const projectPath = path.join(process.cwd(), projectName);

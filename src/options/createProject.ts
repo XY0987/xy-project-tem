@@ -12,13 +12,13 @@ export const createProjectOptions = [
     choices: [
       'React',
       'Vue2',
+      'Vue3',
       'Electron-react',
       'Electron-vue',
       'ReactNative',
       'Nuxt',
       'Next',
       'Nestjs',
-      'Koa',
     ],
   },
 ];
